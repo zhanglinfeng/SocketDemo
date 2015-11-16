@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZLFSocketManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[ZLFSocketManager sharedInstance] startSocketWith:@"192.186.100.21" socketPort:10045];
+
+    
     return YES;
 }
 

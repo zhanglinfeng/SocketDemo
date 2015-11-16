@@ -14,6 +14,9 @@
 		D1BBFE941BE8924400AE4BEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BBFE931BE8924400AE4BEB /* Images.xcassets */; };
 		D1BBFE971BE8924400AE4BEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1BBFE951BE8924400AE4BEB /* LaunchScreen.xib */; };
 		D1BBFEA31BE8924400AE4BEB /* SocketDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFEA21BE8924400AE4BEB /* SocketDemoTests.m */; };
+		D1BBFEB31BE894C400AE4BEB /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFEAF1BE894C400AE4BEB /* AsyncSocket.m */; };
+		D1BBFEB41BE894C400AE4BEB /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFEB11BE894C400AE4BEB /* AsyncUdpSocket.m */; };
+		D1BBFEB81BE8955100AE4BEB /* ZLFSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFEB71BE8955100AE4BEB /* ZLFSocketManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		D1BBFE9C1BE8924400AE4BEB /* SocketDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocketDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BBFEA11BE8924400AE4BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1BBFEA21BE8924400AE4BEB /* SocketDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketDemoTests.m; sourceTree = "<group>"; };
+		D1BBFEAE1BE894C400AE4BEB /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		D1BBFEAF1BE894C400AE4BEB /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		D1BBFEB01BE894C400AE4BEB /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		D1BBFEB11BE894C400AE4BEB /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		D1BBFEB61BE8955100AE4BEB /* ZLFSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLFSocketManager.h; sourceTree = "<group>"; };
+		D1BBFEB71BE8955100AE4BEB /* ZLFSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLFSocketManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 		D1BBFE851BE8924400AE4BEB /* SocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D1BBFEAC1BE894C400AE4BEB /* AsyncSocket */,
 				D1BBFE8A1BE8924400AE4BEB /* AppDelegate.h */,
 				D1BBFE8B1BE8924400AE4BEB /* AppDelegate.m */,
 				D1BBFE8D1BE8924400AE4BEB /* ViewController.h */,
@@ -117,6 +127,27 @@
 				D1BBFEA11BE8924400AE4BEB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1BBFEAC1BE894C400AE4BEB /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				D1BBFEAD1BE894C400AE4BEB /* RunLoop */,
+				D1BBFEB61BE8955100AE4BEB /* ZLFSocketManager.h */,
+				D1BBFEB71BE8955100AE4BEB /* ZLFSocketManager.m */,
+			);
+			path = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		D1BBFEAD1BE894C400AE4BEB /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				D1BBFEAE1BE894C400AE4BEB /* AsyncSocket.h */,
+				D1BBFEAF1BE894C400AE4BEB /* AsyncSocket.m */,
+				D1BBFEB01BE894C400AE4BEB /* AsyncUdpSocket.h */,
+				D1BBFEB11BE894C400AE4BEB /* AsyncUdpSocket.m */,
+			);
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBFE8F1BE8924400AE4BEB /* ViewController.m in Sources */,
+				D1BBFEB41BE894C400AE4BEB /* AsyncUdpSocket.m in Sources */,
 				D1BBFE8C1BE8924400AE4BEB /* AppDelegate.m in Sources */,
 				D1BBFE891BE8924400AE4BEB /* main.m in Sources */,
+				D1BBFEB31BE894C400AE4BEB /* AsyncSocket.m in Sources */,
+				D1BBFEB81BE8955100AE4BEB /* ZLFSocketManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
